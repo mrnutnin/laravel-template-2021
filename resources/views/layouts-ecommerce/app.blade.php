@@ -28,7 +28,7 @@
 
     <!-- Load Fonts -->
     <link rel="stylesheet" type="text/css" media="all"
-        href="http://fonts.googleapis.com/css?family=Inconsolata:300,400,500,700|Unica+One:300,400,500,700">
+        href="https://fonts.googleapis.com/css?family=Inconsolata:300,400,500,700|Unica+One:300,400,500,700">
     <!-- All theme style -->
     <link rel="stylesheet" type="text/css" media="all" href="{{ URL::asset('/assets/dist/css/app.css') }}">
 
