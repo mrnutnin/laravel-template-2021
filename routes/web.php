@@ -16,6 +16,26 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/', [App\Http\Controllers\EcommerceController::class, 'index'])->name('index');
+Route::get('/index-2',[App\Http\Controllers\EcommerceController::class, 'index2'])->name('index2');
+Route::get('/index-3',[App\Http\Controllers\EcommerceController::class, 'index3'])->name('index3');
+Route::get('/index-4',[App\Http\Controllers\EcommerceController::class, 'index4'])->name('index4');
+Route::get('/products',[App\Http\Controllers\EcommerceController::class, 'products'])->name('products');
+Route::get('/products-with-filter',[App\Http\Controllers\EcommerceController::class, 'productsWithFilter'])->name('products-with-filter');
+Route::get('/products-sidebar-left',[App\Http\Controllers\EcommerceController::class, 'productsSidebarLeft'])->name('products-sidebar-left');
+Route::get('/products-sidebar-right',[App\Http\Controllers\EcommerceController::class, 'productsSidebarRight'])->name('products-sidebar-right');
+Route::get('/product',[App\Http\Controllers\EcommerceController::class, 'product'])->name('product');
+Route::get('/wishlist',[App\Http\Controllers\EcommerceController::class, 'wishlist'])->name('wishlist');
+Route::get('/cart',[App\Http\Controllers\EcommerceController::class, 'cart'])->name('cart');
+Route::get('/checkout',[App\Http\Controllers\EcommerceController::class, 'checkout'])->name('checkout');
+Route::get('/order-received',[App\Http\Controllers\EcommerceController::class, 'orderReceived'])->name('order-received');
+Route::get('/order-tracking',[App\Http\Controllers\EcommerceController::class, 'orderTracking'])->name('order-tracking');
+Route::get('/page',[App\Http\Controllers\EcommerceController::class, 'page'])->name('page');
+Route::get('/login-register',[App\Http\Controllers\EcommerceController::class, 'loginRegister'])->name('login-register');
+Route::get('/404',[App\Http\Controllers\EcommerceController::class, 'Error404'])->name('Error404');
+Route::get('/faqs',[App\Http\Controllers\EcommerceController::class, 'faqs'])->name('faqs');
+Route::get('/about',[App\Http\Controllers\EcommerceController::class, 'about'])->name('about');
+Route::get('/contact',[App\Http\Controllers\EcommerceController::class, 'contact'])->name('contact');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
 
 ##Route to ui template
@@ -64,7 +84,7 @@ Route::get('/ecommerce-cart', [App\Http\Controllers\UiController::class, 'ecomme
 Route::get('/ecommerce-checkout', [App\Http\Controllers\UiController::class, 'ecommercecheckout'])->name('ecommercecheckout');
 Route::get('/ecommerce-customers', [App\Http\Controllers\UiController::class, 'ecommercecustomers'])->name('ecommercecustomers');
 Route::get('/ecommerce-orders', [App\Http\Controllers\UiController::class, 'ecommerceorders'])->name('ecommerceorders');
-Route::get('/ecommerce-product-detail', [App\Http\Controllers\UiController::class, 'ecommerceproduct-detail'])->name('ecommerceproductdetail');
+Route::get('/ecommerce-product-detail', [App\Http\Controllers\UiController::class, 'ecommerceproductdetail'])->name('ecommerceproductdetail');
 Route::get('/ecommerce-products', [App\Http\Controllers\UiController::class, 'ecommerceproducts'])->name('ecommerceproducts');
 Route::get('/ecommerce-shops', [App\Http\Controllers\UiController::class, 'ecommerceshops'])->name('ecommerceshops');
 Route::get('/email-inbox', [App\Http\Controllers\UiController::class, 'emailinbox'])->name('emailinbox');
@@ -87,7 +107,7 @@ Route::get('/icons-boxicons', [App\Http\Controllers\UiController::class, 'iconsb
 Route::get('/icons-dripicons', [App\Http\Controllers\UiController::class, 'iconsdripicons'])->name('iconsdripicons');
 Route::get('/icons-fontawesome', [App\Http\Controllers\UiController::class, 'iconsfontawesome'])->name('iconsfontawesome');
 Route::get('/icons-materialdesign', [App\Http\Controllers\UiController::class, 'iconsmaterialdesign'])->name('iconsmaterialdesign');
-Route::get('/index', [App\Http\Controllers\UiController::class, 'index'])->name('index');
+Route::get('/index-admin', [App\Http\Controllers\UiController::class, 'index'])->name('indexadmin');
 Route::get('/invoices-detail', [App\Http\Controllers\UiController::class, 'invoicesdetail'])->name('invoicesdetail');
 Route::get('/invoices-list', [App\Http\Controllers\UiController::class, 'invoiceslist'])->name('invoiceslist');
 Route::get('/layouts-boxed', [App\Http\Controllers\UiController::class, 'layoutsboxed'])->name('layoutsboxed');
